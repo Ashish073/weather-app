@@ -1,4 +1,4 @@
-# Simple Weather app
+# Simple Weather App
 
 This is a simple weather app done using ReactJS and Tailwind that allows you to check weather of certain cities using the GeoDB Cities api from RapidApi and the OpenWeather api.
 
