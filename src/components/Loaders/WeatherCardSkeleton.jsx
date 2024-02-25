@@ -20,8 +20,8 @@ function WeatherCardSkeleton() {
                     </div>
                     <div className="weather-card-display-details-container">
                         <div className="weather-card-detail-content skeleton-loader rounded-lg">
-                            <span>
-                                <Icons name="Wind" className="opacity-0" />
+                            <span className='opacity-0'>
+                                loading
                             </span>
                             <span className="opacity-0">
                                 loading
@@ -29,8 +29,8 @@ function WeatherCardSkeleton() {
                             </span>
                         </div>
                         <div className="weather-card-detail-content skeleton-loader rounded-lg">
-                            <span>
-                                <Icons name="Wind" className="opacity-0" />
+                            <span className='opacity-0'>
+                                loading
                             </span>
                             <span className="opacity-0">
                                 loading
@@ -38,8 +38,8 @@ function WeatherCardSkeleton() {
                             </span>
                         </div>
                         <div className="weather-card-detail-content skeleton-loader rounded-lg">
-                            <span>
-                                <Icons name="Wind" className="opacity-0" />
+                            <span className='opacity-0'>
+                                loading
                             </span>
                             <span className="opacity-0">
                                 loading

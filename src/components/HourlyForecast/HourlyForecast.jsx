@@ -64,7 +64,8 @@ const HourlyForecast = ({ data }) => {
     }, [isDragging, startX, scrollLeft]);
 
     return (
-        <div className="flex px-3.5 mb-3">
+        <div className="flex px-3.5 mb-3 flex-col justify-center items-start">
+            <h1 className="text-2xl font-bold mb-3">Hourly</h1>
             <ul
                 title="Drag to scroll"
                 ref={ulRef}
