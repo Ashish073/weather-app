@@ -1,0 +1,113 @@
+.daily-item {
+    @apply bg-[#f5f5f5] rounded-2xl h-[40px] m-[5px] items-center cursor-pointer flex text-[14px] px-[5px] py-[20px];
+}
+
+.icon-small {
+    @apply w-[45px]
+}
+
+.min-max {
+    @apply text-[#757575];
+}
+
+.daily-details-grid {
+    @apply grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.daily-details-grid-item {
+    @apply flex flex-col justify-center bg-purple-400 items-center gap-4 rounded-lg p-3;
+
+    .daily-icon-value {
+        @apply flex justify-center items-center w-full text-white;
+
+        .daily-icon {
+            @apply text-white mr-1;
+        }
+
+        .daily-detail-label {
+            @apply font-semibold capitalize whitespace-nowrap md:whitespace-normal lg:whitespace-nowrap text-white;
+
+            @media (max-width: 280px) {
+                white-space: normal !important;
+            }
+        }
+
+    }
+
+    .daily-value {
+        @apply text-3xl font-semibold text-white -mt-3;
+
+        span {
+            @apply ml-1 text-sm;
+        }
+    }
+
+    .daily-details-item-feels-like {
+        @apply flex -mt-3 text-3xl text-white font-semibold;
+    }
+}
+
+.daily-forcast-container {
+    @apply flex-wrap flex justify-start items-center mx-2.5;
+
+    .daily-forcast-title {
+        @apply text-2xl font-semibold mb-3;
+    }
+
+    .daily-forecast-grid {
+        @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 mb-5 gap-4 xl:gap-4 w-full;
+
+        .daily-forecast-item {
+            @apply w-full cursor-pointer;
+
+            .daily-forecast-content {
+                @apply flex justify-start items-center flex-col border-2 rounded-xl p-2 h-full w-full hover:bg-purple-200;
+
+                .daily-forecast-content-day {
+                    @apply font-semibold text-lg mb-3;
+                }
+
+                .daily-forecast-content-temp {
+                    @apply flex justify-center items-center flex-col mb-1;
+
+                    .daily-forecast-content-temp-val {
+                        @apply flex justify-center items-center font-semibold;
+                    }
+                }
+
+                .daily-forecast-content-desc {
+                    @apply capitalize text-center;
+                }
+            }
+
+            .daily-forecast-content.active {
+                @apply bg-purple-600 hover:bg-purple-400 text-white;
+            }
+        }
+
+    }
+}
+
+.dynamic-forecast-container {
+    @apply my-3;
+
+    .dynamic-forecast-controls {
+        @apply w-full flex my-4;
+
+        .dynamic-forecast-change-back-btn {
+            @apply disabled:text-neutral-300 hover:text-purple-600;
+        }
+
+        .dynamic-forecast-change-next-btn {
+            @apply disabled:text-neutral-300 hover:text-purple-600;
+        }
+    }
+}
+
+.today-forecast-container {
+    @apply bg-gradient-to-r from-purple-500 via-violet-500 to-pink-400 text-white rounded-xl p-3;
+
+    .today-forecast-title {
+        @apply text-2xl font-bold mb-3;
+    }
+}

@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('./components/_forecast.scss');
+@import url('./components/_weatherCard.scss');
+@import url('./components/_hourlyForecast.scss');
+@import url('./components/_landingPage.scss');
+
+body {
+    @apply bg-neutral-200
+}
+
+.skeleton-loader {
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.25) 50%,
+            rgba(255, 255, 255, 0) 80%),
+        #00000010;
+    background-repeat: repeat-y;
+    background-size: 50px 500px;
+    background-position: 0 0;
+    animation: shine 1s infinite;
+}
+
+.image-white-convert {
+    filter: brightness(0) invert(1);
+}
+
+.text-error {
+    @apply text-red-500;
+}
+
+@keyframes shine {
+    to {
+        background-position: 100% 0, 0 0;
+    }
+}

@@ -1,0 +1,27 @@
+.hourly-temps::-webkit-scrollbar {
+    @apply hidden;
+}
+
+.hourly-temps-container {
+    @apply flex px-3.5 mb-3;
+}
+
+.hourly-temps {
+    @apply w-full flex flex-nowrap cursor-pointer select-none overflow-x-auto pb-1;
+}
+
+.hourly-temp-item {
+    @apply p-3 border-2 rounded-xl;
+
+    .hourly-temp-item-content {
+        @apply flex justify-center items-center flex-col w-[80px];
+
+        .hourly-temp-item-content-val {
+            @apply font-semibold text-2xl mb-2;
+        }
+
+        .hourly-temp-item-content-time {
+            @apply text-neutral-400;
+        }
+    }
+}

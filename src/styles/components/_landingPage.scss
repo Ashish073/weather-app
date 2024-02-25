@@ -1,0 +1,36 @@
+.landing-page-container {
+    @apply flex flex-col rounded-2xl select-none;
+
+    .landing-page-content {
+        @apply h-full grid grid-cols-1 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-9 xl:grid-cols-6 bg-neutral-100 rounded-2xl text-neutral-500;
+
+        .landing-page-content-span-1 {
+            @apply col-span-4 sm:col-span-3 md:col-span-4 lg:col-span-5 xl:col-span-4 bg-neutral-50 p-3 rounded-tl-2xl rounded-bl-2xl;
+
+            .landing-page-content-span-1-content {
+                @apply flex justify-between items-center flex-wrap;
+
+                .landing-page-content-span-1-content-location {
+                    @apply font-semibold text-lg flex justify-center items-center mb-3 md:mb-0;
+                }
+
+                .landing-page-content-span-1-content-time {
+                    @apply flex justify-center items-center mb-5 md:mb-0 font-semibold;
+                }
+            }
+        }
+
+        .landing-page-content-span-2 {
+            @apply col-span-2 sm:col-span-3 md:col-span-3 lg:col-span-4 xl:col-span-2 rounded-tr-2xl rounded-br-2xl p-3;
+        }
+
+    }
+}
+
+.landing-page-initial {
+    @apply h-screen mt-[-15vh] w-full flex justify-center items-center;
+
+    h1 {
+        @apply font-semibold text-xl text-neutral-500 text-center;
+    }
+}
