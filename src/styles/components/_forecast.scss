@@ -50,6 +50,10 @@
 .daily-forcast-container {
     @apply flex-wrap flex justify-start items-center mx-2.5;
 
+    @media (max-width: 450px) {
+        display: none !important;
+    }
+
     .daily-forcast-title {
         @apply text-2xl font-bold mb-3;
     }

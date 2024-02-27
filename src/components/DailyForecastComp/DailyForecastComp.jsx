@@ -10,7 +10,7 @@ function DailyForecastComp({ weatherInfo, handleSelectedDay, selectedDay }) {
 
     return (
         <>
-            <div className="daily-forcast-container hidden md:flex">
+            <div className="daily-forcast-container">
                 <h1 className="daily-forcast-title">Daily</h1>
                 <div className="daily-forecast-grid">
                     {

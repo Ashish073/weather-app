@@ -4,7 +4,7 @@ import { getTemp } from "../../utils/commonUtils";
 import { useTempScaleContext } from "../../context/TempScaleContext";
 import CountToComp from "../CountToComp";
 
-function WeatherCard({ data, size = 140, displayHint = true, displayDetails = true, defaultStyling = true }) {
+function WeatherCard({ data, size = 140, displayHint = true, displayDetails = true, defaultStyling = true, className }) {
     const { tempType } = useTempScaleContext();
 
     return (
@@ -13,10 +13,10 @@ function WeatherCard({ data, size = 140, displayHint = true, displayDetails = tr
                 <div className="weather-card-content">
                     <div className="weather-card-temp-content" title={`${getTemp(Math.round(data.main.temp), tempType)}° ${tempType === 'c' ? 'celsius' : 'fahrenheit'}`}>
                         <div className="weather-card-temp-container">
-                            <CountToComp maxValue={getTemp(data.main.temp, tempType)} className={`text-[${size}px] temperature`} />
-                            <p className={`text-[70px] md:text-[${size}px] -mt-8 temperature`} >°</p>
+                            <CountToComp maxValue={getTemp(data.main.temp, tempType)} className={className} />
+                            <p className={`${!defaultStyling ? 'temp-symbol' : className}`} >°</p>
                         </div>
-                        <span className={`${!defaultStyling ? '-ml-5 md:-ml-10  -mt-8' : '-mt-3 lg:text-base mb-5'} weather-card-temp-desc`}>{data.weather[0].description}</span>
+                        <span className={`${!defaultStyling ? '-ml-5 md:-ml-10' : '-mt-3 lg:text-base mb-5'} weather-card-temp-desc`}>{data.weather[0].description}</span>
                     </div>
                     {
                         displayDetails ?

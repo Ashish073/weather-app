@@ -1,9 +1,45 @@
 .temperature {
     @apply font-semibold w-auto mx-[10px];
-    margin: 10px 0;
+    font-size: 140px;
 
-    @media (max-width: 400px) {
-        font-size: 80px !important;
+    @media (max-width: 800px) {
+        font-size: 70px !important;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 70px !important;
+    }
+}
+
+.temp-symbol {
+    @apply font-semibold w-auto -mt-[30px] -ml-[10px];
+
+    @media (min-width: 1024px) {
+        font-size: 140px !important;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 70px !important;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 70px !important;
+    }
+}
+
+.dynamic-temp {
+    @apply font-semibold w-auto;
+
+    @media (min-width: 1024px) {
+        font-size: 70px !important;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 70px !important;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 70px !important;
     }
 }
 
@@ -22,7 +58,7 @@
         }
 
         .weather-card-temp-desc {
-            @apply capitalize font-semibold text-lg md:text-2xl;
+            @apply capitalize font-semibold text-lg md:text-2xl -mt-[24px];
         }
     }
 

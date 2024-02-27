@@ -30,7 +30,9 @@ function LandingPage() {
     return <WeatherSkeleton />
   }
 
-  if (Object.keys(weatherInfo).length) {
+  console.log(weatherInfo);
+
+  if (Object.keys(weatherInfo).length && !weatherInfo?.forecast?.message && !weatherInfo?.currentWeather?.message) {
     return (
       <div className="landing-page-container">
         <div className="landing-page-content">
@@ -49,7 +51,7 @@ function LandingPage() {
                 ) : null
             }
             <div className="mb-10">
-              {weatherInfo.currentWeather && <WeatherCard data={weatherInfo.currentWeather} defaultStyling={false} />}
+              {weatherInfo.currentWeather && <WeatherCard data={weatherInfo.currentWeather} defaultStyling={false} className="temperature" />}
             </div>
             <div>
               <HourlyForecast data={weatherInfo?.hourlyForecast?.hourly} />
@@ -63,7 +65,7 @@ function LandingPage() {
           </div>
           <div className="landing-page-content-span-2">
             <TodayForecastComp weatherInfo={weatherInfo} />
-            <DynamicForecastDetailsComp weatherInfo={weatherInfo.forecast.list[selectedDay]} selectedDay={selectedDay} handleSelectedDay={handleSelectedDay} />
+            <DynamicForecastDetailsComp weatherInfo={weatherInfo?.forecast?.list[selectedDay]} selectedDay={selectedDay} handleSelectedDay={handleSelectedDay} />
           </div>
         </div>
       </div>
@@ -73,8 +75,20 @@ function LandingPage() {
   return (
     <>
       <div className="landing-page-initial">
-        <h1>Please search a city to check the weather.</h1>
-      </div>
+        {
+          weatherInfo?.forecast?.message || weatherInfo?.currentWeather?.message || weatherInfo?.hourlyForecast?.message ?
+            <div className="flex justify-center items-center flex-col">
+              <h1 className="error-code">
+                <Icons name="ShieldAlert" className="error-code-icon" size={100} />
+                {weatherInfo?.forecast?.cod || weatherInfo?.currentWeather?.cod || weatherInfo?.hourlyForecast?.cod}</h1>
+              <h1 className='initial-text'>Something went wrong please try again later.</h1>
+            </div>
+            :
+            <h1 className='initial-text'>
+              Please search a city to check the weather.
+            </h1>
+        }
+      </div >
     </>
   )
 

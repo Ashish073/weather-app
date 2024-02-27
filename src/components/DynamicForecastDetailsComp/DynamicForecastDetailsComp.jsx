@@ -32,7 +32,7 @@ function DynamicForecastDetailsComp({ weatherInfo, selectedDay, handleSelectedDa
                 </div>
                 <div>
                     <div>
-                        <WeatherCard data={weatherInfo} size={50} displayDetails={false} displayHint={false} />
+                        <WeatherCard data={weatherInfo} className="dynamic-temp" displayDetails={false} displayHint={false} />
                     </div>
                     <div className="daily-details-grid">
                         <div className="daily-details-grid-item">
