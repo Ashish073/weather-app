@@ -2,7 +2,7 @@
 
 This is a simple weather app done using ReactJS and Tailwind that allows you to check weather of certain cities using the GeoDB Cities api from RapidApi and the OpenWeather api.
 
-##Getting Started
+## Getting Started
 These instructions will guide you on how to set up the project on your local machine for development and testing purposes.
 
 ## Prerequisites
@@ -23,7 +23,10 @@ cd weather-app
 ```bash
 npm install
 ```
-4. Create a .env file in the project root and add the following keys:
+4. Additional dependencies for tailwind using postcss:
+Please follow below link for the setup process of tailwind using postcss.
+[https://tailwindcss.com/docs/installation/using-postcss](https://tailwindcss.com/docs/installation/using-postcss)
+6. Create a .env file in the project root and add the following keys:
 ```bash
 VITE_WEATHER_API_KEY=*OPEN WEATHER API KEY*
 VITE_GEOLOC_API_HOST=wft-geo-db.p.rapidapi.com
@@ -35,7 +38,7 @@ Website for the GeoDB Cities Rapid Api [https://rapidapi.com/wirefreethought/api
 
 Replace the placeholder values with your actual API keys.
 
-5. Start the development server:
+6. Start the development server:
 ```bash
 npm run dev
 ```
