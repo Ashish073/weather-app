@@ -23,9 +23,11 @@ cd weather-app
 ```bash
 npm install
 ```
+
 4. Additional dependencies for tailwind using postcss:
 Please follow below link for the setup process of tailwind using postcss.
 [https://tailwindcss.com/docs/installation/using-postcss](https://tailwindcss.com/docs/installation/using-postcss)
+
 6. Create a .env file in the project root and add the following keys:
 ```bash
 VITE_WEATHER_API_KEY=*OPEN WEATHER API KEY*
